@@ -12,7 +12,10 @@ defmodule App do
       :world
 
   """
-  def hello do
-    IO.puts("Hello")
+  def main do
+    IO.puts(len([1, 2, 3]))
   end
+
+  def len([]), do: 0
+  def len([head|tail]), do: 1 + len(tail)
 end
